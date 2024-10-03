@@ -1,9 +1,9 @@
-name: Build iOS
+name: CI
 
 on:
   push:
     branches:
-      - Goals  # Change this to your branch name
+      - Goals
 
 jobs:
   build:
@@ -16,23 +16,9 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14'  # Specify the version you need
+          node-version: '20'
 
-      - name: Install dependencies
-        run: |
-          npm install
-          cd ios
-          pod install
-          cd ..
-
-      - name: Build iOS app
-        run: |
-          cd ios
-          xcodebuild -workspace YourApp.xcworkspace -scheme YourApp -sdk iphoneos -configuration Release archive -archivePath ./build/YourApp.xcarchive
-          xcodebuild -exportArchive -archivePath ./build/YourApp.xcarchive -exportOptionsPlist ./exportOptions.plist -exportPath ./build
-
-      - name: Upload IPA
-        uses: actions/upload-artifact@v3
+      - name: Run my custom action
+        uses: ./path/to/your/action  # Adjust the path to your action
         with:
-          name: YourApp.ipa
-          path: ./build/YourApp.ipa
+          name: 'World'  # Example input
