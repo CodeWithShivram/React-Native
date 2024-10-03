@@ -1,54 +1,35 @@
-# React Native
-# Built files
-android/app/build/
-ios/build/
-ios/Pods/
-ios/Podfile.lock
-ios/*.xcworkspace
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
 
 # Expo
 .expo/
-.expo-shared/
-npm-debug.log
-yarn-error.log
-package-lock.json
-yarn.lock
-
-# Node.js
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# MacOS
-.DS_Store
-
-# Visual Studio Code
-.vscode/
-*.code-workspace
-
-# Environment Variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Miscellaneous
-coverage/
 dist/
-build/
-*.log
-*.tmp
-*.temp
-*.swp
-*.swo
+web-build/
 
-# IDE specific files
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# React Native specific
+# Native
+*.orig.*
 *.jks
-*.keystore
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
