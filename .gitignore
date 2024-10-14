@@ -5,7 +5,8 @@ ios/build/
 ios/Pods/
 ios/Podfile.lock
 ios/*.xcworkspace
-
+/android 
+/ios
 # Expo
 .expo/
 .expo-shared/
