@@ -1,11 +1,9 @@
 # React Native
 # Built files
-android/app/build/
 ios/build/
 ios/Pods/
 ios/Podfile.lock
-ios/*.xcworkspace
-/android 
+ios/*.xcworkspace 
 /ios
 # Expo
 .expo/
@@ -14,7 +12,8 @@ npm-debug.log
 yarn-error.log
 package-lock.json
 yarn.lock
-
+download/
+android/
 # Node.js
 node_modules/
 npm-debug.log*
